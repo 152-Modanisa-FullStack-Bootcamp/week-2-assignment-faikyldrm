@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" >
+    <Header class="main"/>
+    <div class="main">
+<!--    when we use vue-router whe have to add router-view for display routed page -->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/components/Header";
+//import MainPage from "@/Views/MainPage";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   // MainPage,
+    Header,
+
+  },
+  mounted() {
+  this.$router.push("/main")
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main {
+  display: flex;
+  align-items: center;
+ width: 1500px;
+
+  margin: 50px 200px;
 }
 </style>

@@ -27,7 +27,6 @@ export default {
     //deconstract with javascript shorthand
     const {data} = await axios.get("https://my-json-server.typicode.com/modanisa/bootcamp-video-db/videos");
     this.$store.state.videos = data;
-  //  this.videoItems = data;
   }
 }
 </script>

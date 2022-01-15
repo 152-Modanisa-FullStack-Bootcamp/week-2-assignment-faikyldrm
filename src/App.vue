@@ -10,14 +10,11 @@
 
 <script>
 import Header from "@/components/Header";
-//import MainPage from "@/Views/MainPage";
 
 export default {
   name: 'App',
   components: {
-   // MainPage,
     Header,
-
   },
   mounted() {
   this.$router.push("/main")

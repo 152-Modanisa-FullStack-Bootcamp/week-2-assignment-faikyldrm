@@ -18,10 +18,6 @@ export default {
   },
   computed:{
     ...mapGetters(["getFavorites"])
-  },
-  async created() {
-   // const {data} = await axios.get("https://my-json-server.typicode.com/modanisa/bootcamp-video-db/videos?favorite=true");
-   // this.favVideos = data;
   }
 }
 
